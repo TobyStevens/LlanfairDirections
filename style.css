@@ -1,0 +1,128 @@
+#map {
+    position: fixed;
+    z-index: 3;
+    height: 100%;
+}
+            
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#locationBox {
+    position: absolute;
+    z-index: 5;
+    top: 50px;
+    left: 10px;
+    padding: 5px;
+    text-align: center;
+    font-family: 'Roboto', 'sans-serif';
+    line-height: 20px;
+    padding-left: 10px;
+    background-color: #FFF;
+    border: 1px solid #999;
+}
+
+@media only screen and (min-width: 992px) {
+    #locationBox {
+        width: 25%;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    #locationBox {
+        width: 80%;
+        left: 10%;
+    }
+}
+.btn {
+    margin-left: 5px;
+}
+
+#directionsBox {
+    width: 20%;
+    max-height: 750px;
+    position: fixed;
+    z-index: 5;
+    top: 150px;
+    left: 10px;
+    background-color: #fff;
+    border: 1px solid #999;
+}
+
+.directionsTab {
+    display: inline;
+    line-height: 40px;
+    font-size: 15px;
+    width: 121px;
+    border: 1px solid #999;
+    margin-top: 5px;
+}
+
+#directionsView {
+    overflow: scroll;
+    max-height: 710px;
+}
+
+.selected {
+    border-bottom: 0;
+}
+
+#toggleDirections {
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+    height: 10%;
+    color: inherit;
+    font-size: 30px;
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Roboto', 'sans-serif';
+    bottom: 0;
+    background-color: #fff;
+    padding-bottom: 10px;
+}
+
+#mobileDirectionsBox {
+    position: absolute;
+    z-index: 5;
+    width: 100%;
+    height: 10%;
+    bottom: 10%;
+    left: 0;
+    background-color: #fff;
+}
+
+/* ANIMATION CLASSES*/
+.animating #menu, .menu-visible #menu {
+    display: block;
+}
+
+.animating #page {
+    transition: transform .25s ease-in-out;
+    -webkit-transition: -webkit-transform .25s ease-in-out;
+}
+
+.animating .up #page {
+    transform: translate3d(0, -350px, 0);
+    -webkit-transform: translate3d(0, -350px, 0);
+}
+
+.animating .down #page {
+    transform: translate3d(0, 350px, 0);
+    -webkit-transform: translate3d(0, 350px, 0);
+}
+
+.menu-visible #page {
+    bottom: 100%;
+}
+#mobileDirectionsView {
+    z-index: 5;
+    position: absolute;
+    bottom: 20%;
+    overflow: scroll;
+    height: 80%;
+    width: 100%;
+    background: #fff;
+}

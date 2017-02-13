@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Directions to Llanfairfechan</title>
+        <meta name='viewport' content='initial-scale=1.0'>
+        <meta charset="utf-8">
+        <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett">
+        <link rel='stylesheet' href='style.css'/>
+        <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+    </head>
+    
+    <body>
+        
+        <div id='map'></div>
+        
+        <div id='start' class='hidden'></div>
+        
+        <div id='locationBox' class='hidden'>
+            <p>The webpage couldn't determine your location.<br>Would you like to enter it manually?</p>
+            <input id='address' type='textbox' placeholder='Enter your location'>
+            <input class='btn btn-primary disabled' id='geocodeButton' type='button' value='Enter'>
+        </div>
+        
+        
+        <div id='directionsBox' class='hidden-sm hidden-xs hidden'>
+            <ul class='nav nav-tabs nav-justified'>
+                <li class='active'><a href='#'>DRIVING</a></li>
+                <li><a href='#'>WALKING</a></li>
+                <li><a href='#'>TRANSIT</a></li>
+            </ul>
+            <div id='directionsView'></div>
+        </div>
+        
+        <div id='mobileDirectionsView' class='hidden'></div>
+        <a href='#' id='toggleDirections' class='hidden-md hidden-lg hidden'>Toggle Directions</a>
+        
+        <div id='mobileDirectionsBox' class='hidden-md hidden-lg hidden'>
+            <ul class='nav nav-tabs'>
+                <li class='active'><a href='#'>DRIVING</a></li>
+                <li><a href='#'>WALKING</a></li>
+                <li><a href='#'>TRANSIT</a></li>
+            </ul>
+        </div>
+        
+        
+        <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js'></script>
+        <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
+        <script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCW8daHIKQx2DxIs7387pHPOIP0Jt4f7mc&callback=initMap' async defer></script>
+        <script src='script.js'></script>
+    </body>
+</html>
